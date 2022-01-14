@@ -2,20 +2,6 @@
 
 A React component to render HubSpot forms.
 
-## Installation
-
-With npm:
-
-```bash
-npm install --save react-hubspot-form
-```
-
-Or with Yarn:
-
-```bash
-yarn add react-hubspot-form
-```
-
 ## Usage
 
 ```jsx
