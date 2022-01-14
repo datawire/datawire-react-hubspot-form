@@ -28,6 +28,6 @@
     "react-dom": "^16.1.1"
   },
   "dependencies": {
-    "styled-jsx": "^2.2.4"
+    "styled-jsx": "^3.4.7"
   }
 }
