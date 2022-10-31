@@ -75,7 +75,6 @@ var HubspotForm = function (_React$Component) {
 		key: 'loadScript',
 		value: function loadScript() {
 			var _this3 = this;
-			console.log("New version hubspot form");
 			var script = document.createElement('script');
 			script.defer = true;
 			script.onload = function () {
