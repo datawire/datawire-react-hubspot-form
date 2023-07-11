@@ -121,20 +121,24 @@ var HubspotForm = (function (_React$Component) {
           if (this.el === null) {
             return;
           }
-          var props = _extends({}, this.props);
+          let props = _extends({}, this.props);
           delete props.loading;
           delete props.onSubmit;
           delete props.onReady;
-          var options = _extends({}, props, {
+
+          let options = _extends({}, props, {
             // ref: https://developers.hubspot.com/docs/methods/forms/advanced_form_options
             target: "#" + this.el.getAttribute("id"),
-            onFormSubmit: function onFormSubmit(form) {
+          });
+
+          if (_this2.props.hasOwnProperty("onSubmit")) {
+            options["onFormSubmit"] = (form) => {
               const formData = new FormData(form);
               const formValues = Object.fromEntries(formData.entries());
-
               _this2.props.onSubmit(formValues);
-            },
-          });
+            };
+          }
+
           window.hbspt.forms.create(options);
           return true;
         } else {
